@@ -1,0 +1,77 @@
+<!--
+  Hit RUN to see this project in action!
+
+  This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Prismatic Studios</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="#" class="logo">Prismatic <br> studios</a>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#sec">About</a></li>
+        <li><a href="Games.html">Games</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="steam-menambahkan-lebih-banyak-batasan-untuk-mencegah-penyalahgunaan-harga-regional.jpg" id="steam" />
+    </section>
+
+    <div class="sec" id="sec">
+      <h2>Prismatic Studios</h2>
+      <p>
+        Welcome to the Games Category on Prismatic Studios. Step into a world of endless excitement and adventure with our Games Category. Here at Prismatic Studios, we curate an exceptional selection of games to cater to every gaming preference and age group. From pulse-pounding action to mind-bending puzzles, there's something for everyone to enjoy.Discover immersive worlds filled with rich storytelling and captivating gameplay.
+        <br> <br> Whether you're a seasoned gamer or just starting out, our diverse range of titles ensures that you'll find the perfect game to lose yourself in for hours on end. We're passionate about gaming and dedicated to providing an unparalleled gaming experience for our visitors. With regular updates and new additions, there's always something fresh and exciting to explore.Join our community of fellow gamers and embark on an unforgettable journey through the world of interactive entertainment. Welcome to the Games Category on Prismatic Studios, where the adventure never ends.
+
+        <ul>
+          <br>
+          <br>
+          <h2>Games</h2>
+          <li><p>Wallbound</p></li>
+          <a href="https://store.steampowered.com/app/2901500/Wallbound/" id="linkss"><p id="linkss">Get Wallbound</p></a>
+          <br>
+          <li><p>VR game comming soon...</p></li>
+          <br>
+          <li><p>Mobile game comming soon...</p></li>
+          
+          
+        <br />
+      </p>
+    </div>
+
+    <script>
+
+      let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let mountains_behind = document.getElementById('mountains_behind');
+      let mountiains_front = document.getElementById('mountiains_front');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountiains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+      });
+    </script>
+
+
+  </body>
+</html>

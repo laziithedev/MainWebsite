@@ -1,0 +1,70 @@
+<!--
+  Hit RUN to see this project in action!
+  
+  This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Prismatic Studios</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="#" class="logo">Prismatic <br> studios</a>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#sec">About</a></li>
+        <li><a href="Games.html">Games</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars" />
+      <img src="moon.png" id="moon" />
+      <img src="mountains_behind.png" id="mountains_behind" />
+      <h2 id="text">Prismatic Studios</h2>
+      <a href="#sec" id="btn">Explore</a>
+      <img src="mountains_front.png" id="mountiains_front" />
+    </section>
+
+    <div class="sec" id="sec">
+      <h2>Prismatic Studios</h2>
+      <p>
+Prismatic Studios is more than just a coding company; we are a passionate collective of visionaries, dreamers, and gamers dedicated to crafting extraordinary experiences. With a focus on FPS Parkour games, we blend cutting-edge technology with artistic flair to transport players  to thrilling new worlds. Led by a team of gamers, our studio embodies a spirit of innovation and excellence. Each member brings a unique set of skills and perspectives, united by a shared commitment to pushing the boundaries of gaming.
+        <br> <br>Our flagship title, "Wallbound," is a testament to this ethos, offering players an exhilarating blend of fast-paced action and heart-pounding parkour mechanics.Beyond our commitment to crafting exceptional games, Prismatic Studios is defined by our culture of creativity, collaboration, and inclusivity. We believe in the power of gaming to bring people together, fostering communities and sparking imaginations.
+        <br> <br>As we continue on our journey, we invite you to join us in exploring the endless possibilities of interactive entertainment. Whether you're a player seeking adventure or a talent looking to make your mark in the industry, Prismatic Studios is where innovation meets inspiration. Welcome to the future of gaming.
+        <br />
+      </p>
+    </div>
+
+    <script>
+      
+      let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let mountains_behind = document.getElementById('mountains_behind');
+      let mountiains_front = document.getElementById('mountiains_front');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountiains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+      });
+    </script>
+
+    
+  </body>
+</html>
